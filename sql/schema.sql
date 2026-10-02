@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS bookmyshow;
+USE bookmyshow;
+
 CREATE TABLE theatre (
     theatre_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
@@ -73,7 +76,7 @@ CREATE TABLE movie (
     INDEX idx_movie_release_date (release_date)
 ) ENGINE = InnoDB;
 
-CREATE TABLE show (
+CREATE TABLE movie_show (
     show_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     movie_id BIGINT UNSIGNED NOT NULL,
     screen_id BIGINT UNSIGNED NOT NULL,
